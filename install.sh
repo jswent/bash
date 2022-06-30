@@ -25,7 +25,7 @@ echo "Creating symlink $HOME/.bash/.bashrc -> $HOME/.bashrc"
 ln -s "$HOME/.bash/.bashrc" "$HOME/.bashrc"
 
 # check if fzf is installed
-if [ ! command -v fzf &> /dev/null ]; then
+if ! command -v fzf &> /dev/null; then
   
   # get os name 
   if [ -f /etc/os-release ]; then
