@@ -1,10 +1,5 @@
 #!/bin/bash 
 
-# check if .bashrc already exists, backup
-if [ -f "$HOME/.bashrc" ]; then
-  mv  "$HOME/.bashrc" "$HOME/.bashrc.old"
-fi 
-
 # check if .bash already exists, backup
 if [ -d "$HOME/.bash" ]; then
   while true; do
@@ -16,6 +11,11 @@ if [ -d "$HOME/.bash" ]; then
     esac
   done
 fi
+
+# check if .bashrc already exists, backup
+if [ -f "$HOME/.bashrc" ]; then
+  mv  "$HOME/.bashrc" "$HOME/.bashrc.old"
+fi 
 
 # clone new bash config 
 git clone https://github.com/jswent/bash "$HOME/.bash"
