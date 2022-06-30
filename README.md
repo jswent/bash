@@ -17,8 +17,19 @@ and opening in your preferred text editor.
 
 ```sh 
 wget https://raw.githubusercontent.com/jswent/bash/main/install.bash 
-nvim install.sh 
-bash install.sh 
+nvim install.bash 
+chmod +x install.bash 
+./install.bash
 ```
 
+### Manual installation 
 
+To manually setup this config, you can clone the repository yourself and link the required file. These commands (should) achieve that for you:
+
+```sh 
+git clone https://github.com/jswent/bash ~/.bash
+# To backup your old .bashrc file
+mv ~/.bashrc ~/.bashrc.old 
+ln -s ~/.bash/.bashrc ~/.bashrc
+bash
+```
