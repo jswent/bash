@@ -33,3 +33,33 @@ mv ~/.bashrc ~/.bashrc.old
 ln -s ~/.bash/.bashrc ~/.bashrc
 bash
 ```
+
+### Configuration
+
+This configuration contains various tools useful for my workflow, but might not be for everyone. 
+
+#### Plugins
+
+The plugins used in this configuration (stored in `plugins` directory) are as follows:
+
+| Plugin                  | Description                                              |
+| :---------------------- | :------------------------------------------------------- |
+| **completion.bash**     | fzf completion plugin                                    |
+| **key-bindings.bash**   | fzf key binds                                            |
+| **git-completion.bash** | git autocompletion functionality                         |
+| **git-prompt.sh**       | git status prompt                                        |
+
+To disable a plugin, simply uncomment the corresponding line in the `plugins/init.bash` file. For example to disable fzf:
+
+```sh 
+#
+# ~/.bash/plugins/init.bash
+#
+
+#!/bin/bash
+
+source ~/.bash/plugins/git-completion.bash
+source ~/.bash/plugins/git-prompt.sh
+# source ~/.bash/plugins/completion.bash
+# source ~/.bash/plugins/key-bindings.bash
+```

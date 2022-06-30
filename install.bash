@@ -85,7 +85,7 @@ if ! command -v neofetch &> /dev/null; then
   while true; do
     read -p "[ERROR] neofetch was not found on your system, would you like to install it? (Y/n) " yn
     case $yn in
-        [Yy]* ) install_program "fzf"; break;;
+        [Yy]* ) install_program "neofetch"; break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
