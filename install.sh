@@ -58,9 +58,9 @@ if ! command -v fzf &> /dev/null; then
       VER=$(uname -r)
   fi
 
-  if [ "$OS" == "Arch Linux" ]; then
+  if [[ "$OS" == "Arch Linux" ]]; then
     sudo pacman -S fzf 
-  elif [ "$OS" == "Ubuntu" ]; then
+  elif [[ "$OS" == "Ubuntu" ]]; then
     sudo apt install fzf 
   else
     echo "Failed to install fzf, please install manually"
