@@ -7,6 +7,9 @@
 
 #alias ls='ls --color=auto'
 
+# Source snippets 
+source ~/.bash/snippets/init.bash
+
 # Source plugins 
 source ~/.bash/plugins/init.bash
 
