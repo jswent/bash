@@ -1,6 +1,6 @@
-alias ls="ls_extended"
-alias lsa="ls -la"
-alias ll="ls -l"
+alias ls='exa --icons --color=always --group-directories-first'
+alias lsa='exa -alF --icons --color=always --group-directories-first'
+alias ll='exa -lF --icons --color=always --group-directories-first'
 alias cls="clear && neofetch"
 
 # Scripts

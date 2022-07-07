@@ -63,6 +63,8 @@ install_program () {
     sudo pacman -S  "$1"
   elif [[ "$OS" == "Ubuntu" ]]; then
     sudo apt install "$1"
+  elif [[ "$OS" == "Darwin" ]]; then
+    sudo brew install "$1"
   else
     echo "Failed to install $1, please install manually"
   fi 
@@ -86,6 +88,18 @@ if ! command -v neofetch &> /dev/null; then
     read -p "[ERROR] neofetch was not found on your system, would you like to install it? (Y/n) " yn
     case $yn in
         [Yy]* ) install_program "neofetch"; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+  done
+fi 
+
+# check if exa is installed 
+if ! command -v exa &> /dev/null; then
+  while true; do
+    read -p "[ERROR] exa was not found on your system, would you like to install it? (Y/n) " yn
+    case $yn in
+        [Yy]* ) install_program "exa"; break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
